@@ -1,0 +1,52 @@
+{
+    "name": "ernestdefoe/chronicle",
+    "description": "An Activity tab on every member's profile: the discussions they started, their replies, the posts they liked, their best answers and badges, newest first.",
+    "keywords": [
+        "flarum",
+        "flarum-extension",
+        "activity",
+        "profile",
+        "feed"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "homepage": "https://github.com/ernestdefoe/chronicle",
+    "support": {
+        "issues": "https://github.com/ernestdefoe/chronicle/issues",
+        "source": "https://github.com/ernestdefoe/chronicle"
+    },
+    "authors": [
+        {
+            "name": "Ernest Defoe",
+            "email": "ernestdefoe@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0"
+    },
+    "suggest": {
+        "flarum/likes": "Shows the posts a member liked.",
+        "fof/best-answer": "Shows the replies of theirs that were chosen as the best answer.",
+        "fof/badges": "Shows the badges a member earned."
+    },
+    "autoload": {
+        "psr-4": {
+            "Ernestdefoe\\Chronicle\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Chronicle",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-stream",
+                "backgroundColor": "#0e7490",
+                "color": "#fff"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

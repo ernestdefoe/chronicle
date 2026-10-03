@@ -1,0 +1,231 @@
+// ── Chronicle ───────────────────────────────────────────────────────────────
+// Theme colours only, so it sits in the default theme, Bespoke and dark mode
+// without settings of its own.
+
+.Chronicle {
+  max-width: 760px;
+}
+
+// Filter chips.
+.Chronicle-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.Chronicle-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border: 1px solid var(--control-bg);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--control-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+
+  .icon {
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--control-bg);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+
+  &.is-active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--body-bg);
+
+    .icon {
+      opacity: 1;
+    }
+  }
+}
+
+// One day.
+.Chronicle-day + .Chronicle-day {
+  margin-top: 22px;
+}
+
+.Chronicle-dayTitle {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+}
+
+.Chronicle-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  // The thread joining a day's items, behind the icons.
+  &::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    background: var(--control-bg);
+  }
+}
+
+.Chronicle-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 7px 0;
+}
+
+.Chronicle-icon {
+  position: relative;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--control-bg);
+  color: var(--control-color);
+  font-size: 0.85rem;
+  // A ring of the page colour, so the thread line stops short of each icon.
+  box-shadow: 0 0 0 4px var(--body-bg);
+}
+
+.Chronicle-item--best_answer .Chronicle-icon,
+.Chronicle-item--like .Chronicle-icon,
+.Chronicle-item--discussion .Chronicle-icon {
+  color: var(--primary-color);
+}
+
+.Chronicle-body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 5px;
+}
+
+.Chronicle-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 10px;
+  row-gap: 2px;
+  color: var(--text-color);
+  line-height: 1.45;
+}
+
+.Chronicle-sentence {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.Chronicle-title {
+  font-weight: 700;
+  color: var(--heading-color, var(--text-color));
+
+  &:hover {
+    color: var(--link-color);
+  }
+}
+
+.Chronicle-time {
+  font-size: 0.8rem;
+  color: var(--muted-color);
+  white-space: nowrap;
+}
+
+.Chronicle-excerpt {
+  margin-top: 6px;
+  padding: 9px 12px;
+  border-radius: var(--border-radius, 6px);
+  background: var(--control-bg-light, var(--control-bg));
+  color: var(--muted-color-dark, var(--text-color));
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+}
+
+// A badge in the badge's own colours, which its admin chose to be legible.
+.Chronicle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: var(--chronicle-badge-bg, var(--primary-color));
+  color: var(--chronicle-badge-fg, var(--body-bg));
+  font-size: 0.85em;
+  font-weight: 700;
+  vertical-align: 1px;
+}
+
+.Chronicle-more {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.Chronicle-empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: var(--muted-color);
+
+  > .icon {
+    font-size: 1.8rem;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0 0 12px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .Chronicle-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -15px 18px;
+    padding: 0 15px 4px;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .Chronicle-chip {
+    flex: 0 0 auto;
+  }
+
+  .Chronicle-item {
+    gap: 12px;
+  }
+}
