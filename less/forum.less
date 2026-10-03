@@ -153,24 +153,35 @@
   white-space: nowrap;
 }
 
-.Chronicle-excerpt {
+.Chronicle .Chronicle-excerpt {
+  display: block;
   margin-top: 6px;
   padding: 9px 12px;
   border-radius: var(--border-radius, 6px);
   background: var(--control-bg-light, var(--control-bg));
-  color: var(--muted-color-dark, var(--text-color));
+  color: var(--text-color);
   font-size: 0.9rem;
   line-height: 1.5;
   overflow-wrap: anywhere;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--control-bg);
+  }
+}
+
+// Clamped on the inner text, not the padded box, so a fourth line can't
+// show through the padding.
+.Chronicle-excerptText {
+  // Coloured here, not on the link: themes style every link with selectors
+  // a class can't outrank, and this text is the member's words, not a link.
+  color: var(--text-color);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
-  &:hover {
-    text-decoration: none;
-    color: var(--text-color);
-  }
 }
 
 // A badge in the badge's own colours, which its admin chose to be legible.

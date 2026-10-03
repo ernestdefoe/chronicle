@@ -220,7 +220,7 @@ export default class ChroniclePage extends UserPage {
         </div>
         {showExcerpt ? (
           <Link className="Chronicle-excerpt" href={this.postUrl(item)}>
-            {item.excerpt}
+            <span className="Chronicle-excerptText">{item.excerpt}</span>
           </Link>
         ) : null}
       </div>,

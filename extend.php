@@ -8,6 +8,8 @@ use Flarum\Extend;
 return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
+        // The Activity page is its own chunk; this publishes it.
+        ->jsDirectory(__DIR__.'/js/dist/forum')
         ->css(__DIR__.'/less/forum.less'),
 
     (new Extend\Frontend('admin'))
