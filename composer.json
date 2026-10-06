@@ -12,6 +12,7 @@
     "license": "MIT",
     "homepage": "https://github.com/ernestdefoe/chronicle",
     "support": {
+        "forum": "https://discuss.flarum.org/d/39990-chronicle",
         "issues": "https://github.com/ernestdefoe/chronicle/issues",
         "source": "https://github.com/ernestdefoe/chronicle"
     },
