@@ -72,9 +72,11 @@ php flarum migrate
 php flarum cache:clear
 ```
 
-## Discuss
+## Support
 
-Questions, ideas and release notes: [Chronicle on discuss.flarum.org](https://discuss.flarum.org/d/39990-chronicle).
+- **Support forum:** [Chronicle on ernestdefoe.online](https://ernestdefoe.online/d/109)
+- **Flarum community:** [Chronicle on discuss.flarum.org](https://discuss.flarum.org/d/39990-chronicle)
+- **Bug reports:** [GitHub issues](https://github.com/ernestdefoe/chronicle/issues)
 
 ## Licence
 
