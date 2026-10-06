@@ -72,6 +72,10 @@ php flarum migrate
 php flarum cache:clear
 ```
 
+## Discuss
+
+Questions, ideas and release notes: [Chronicle on discuss.flarum.org](https://discuss.flarum.org/d/39990-chronicle).
+
 ## Licence
 
 MIT.
