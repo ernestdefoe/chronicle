@@ -14,7 +14,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * GET /api/chronicle/{id}?before=<iso>&key=<type:id>&types=discussion,reply
+ * GET /api/chronicle/{id}?before=<iso>&key=<type:id>&types=discussion,reply.
  *
  * One page of a member's activity. `before` and `key` are the `next` cursor of
  * the previous page; `before` alone also works (everything strictly older).
