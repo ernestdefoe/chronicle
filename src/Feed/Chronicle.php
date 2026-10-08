@@ -235,6 +235,8 @@ class Chronicle
     /**
      * Comment posts the viewer can see, in discussions that are not hidden.
      * Hidden posts are left out even for moderators who could open them.
+     *
+     * @return Builder<Post>
      */
     private function visiblePosts(User $actor): Builder
     {

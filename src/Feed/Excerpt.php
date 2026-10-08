@@ -58,7 +58,7 @@ class Excerpt
             $node->parentNode?->insertBefore($doc->createTextNode(' '), $node->nextSibling);
         }
 
-        return self::trim($doc->documentElement?->textContent ?? '', $length);
+        return self::trim($doc->documentElement->textContent ?? '', $length);
     }
 
     private static function trim(string $text, int $length): string
